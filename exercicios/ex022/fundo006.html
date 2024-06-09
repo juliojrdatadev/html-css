@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo fixo de Tela</title>
     <style>
         body {
+            background-attachment: fixed; /* fixa a imagem de fundo nao deixando se movimentar com scroll movimentando somenbte o conteúdo */
             height: 100vh; /* exibe a imagem do fundo em 100% da viewport (tamanho da tela) */
             background-color: black;
             background-image: url('imagens/wallpaper002.jpg');
-            background-position: center top;
+            background-position: center center;
             background-repeat: no-repeat;
             background-size: cover; /* cobre todo o fundo da tela ajustando a imagem conforme a resolução e tamanho sem distorcer */
+
+            /* ordem de declarações shorthand backgound */
+            /* color > image > position > repeat > [size] > attachment */
+            /* 
+            height: 100vh;
+            background: black url('imagens/wallpaper002.jpg') center center no-repeat fixed;
+            background-size: cover;
+            */
         }
 
         main {
             background-color: white;
-            width: 400px;
+            max-width: 500px;
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
@@ -27,6 +36,36 @@
 <body>
     <main>
         <h1>Texte de imagem de Fundo</h1>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa ut obcaecati iste porro quod asperiores accusamus reiciendis earum, facere deleniti voluptatem, dolorum assumenda quisquam quo laborum! Ea corporis rem sapiente.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio asperiores doloremque nesciunt, omnis possimus laudantium culpa qui fugit laboriosam accusantium saepe obcaecati. Placeat quibusdam ullam eius accusamus facere eligendi cumque.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo blanditiis deserunt, animi ipsum consectetur eius, aut accusamus aliquid, reprehenderit voluptate incidunt repellat nihil saepe unde. Culpa cum explicabo beatae eveniet.
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa ut obcaecati iste porro quod asperiores accusamus reiciendis earum, facere deleniti voluptatem, dolorum assumenda quisquam quo laborum! Ea corporis rem sapiente.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio asperiores doloremque nesciunt, omnis possimus laudantium culpa qui fugit laboriosam accusantium saepe obcaecati. Placeat quibusdam ullam eius accusamus facere eligendi cumque.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo blanditiis deserunt, animi ipsum consectetur eius, aut accusamus aliquid, reprehenderit voluptate incidunt repellat nihil saepe unde. Culpa cum explicabo beatae eveniet.
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa ut obcaecati iste porro quod asperiores accusamus reiciendis earum, facere deleniti voluptatem, dolorum assumenda quisquam quo laborum! Ea corporis rem sapiente.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio asperiores doloremque nesciunt, omnis possimus laudantium culpa qui fugit laboriosam accusantium saepe obcaecati. Placeat quibusdam ullam eius accusamus facere eligendi cumque.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo blanditiis deserunt, animi ipsum consectetur eius, aut accusamus aliquid, reprehenderit voluptate incidunt repellat nihil saepe unde. Culpa cum explicabo beatae eveniet.
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa ut obcaecati iste porro quod asperiores accusamus reiciendis earum, facere deleniti voluptatem, dolorum assumenda quisquam quo laborum! Ea corporis rem sapiente.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio asperiores doloremque nesciunt, omnis possimus laudantium culpa qui fugit laboriosam accusantium saepe obcaecati. Placeat quibusdam ullam eius accusamus facere eligendi cumque.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo blanditiis deserunt, animi ipsum consectetur eius, aut accusamus aliquid, reprehenderit voluptate incidunt repellat nihil saepe unde. Culpa cum explicabo beatae eveniet.
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa ut obcaecati iste porro quod asperiores accusamus reiciendis earum, facere deleniti voluptatem, dolorum assumenda quisquam quo laborum! Ea corporis rem sapiente.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio asperiores doloremque nesciunt, omnis possimus laudantium culpa qui fugit laboriosam accusantium saepe obcaecati. Placeat quibusdam ullam eius accusamus facere eligendi cumque.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo blanditiis deserunt, animi ipsum consectetur eius, aut accusamus aliquid, reprehenderit voluptate incidunt repellat nihil saepe unde. Culpa cum explicabo beatae eveniet.
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa ut obcaecati iste porro quod asperiores accusamus reiciendis earum, facere deleniti voluptatem, dolorum assumenda quisquam quo laborum! Ea corporis rem sapiente.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio asperiores doloremque nesciunt, omnis possimus laudantium culpa qui fugit laboriosam accusantium saepe obcaecati. Placeat quibusdam ullam eius accusamus facere eligendi cumque.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo blanditiis deserunt, animi ipsum consectetur eius, aut accusamus aliquid, reprehenderit voluptate incidunt repellat nihil saepe unde. Culpa cum explicabo beatae eveniet.
+        </p>
         <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa ut obcaecati iste porro quod asperiores accusamus reiciendis earum, facere deleniti voluptatem, dolorum assumenda quisquam quo laborum! Ea corporis rem sapiente.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio asperiores doloremque nesciunt, omnis possimus laudantium culpa qui fugit laboriosam accusantium saepe obcaecati. Placeat quibusdam ullam eius accusamus facere eligendi cumque.
