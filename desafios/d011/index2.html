@@ -11,18 +11,21 @@
             margin-left: 0px;
         }
 
-        body { /* configurações da imagem de fundo e exibição de tela */
+        body { /* configurações da imagem de fundo e exibição */
             background-attachment: fixed; /* fiza o fundo, permitindo que somente o conteúdo que se mexa com o scroll */
             background-color: darkblue;
             background-image: url('imagens/espaco.jpg');
             background-position: center center; /* exibe a imagem baseado pelo centro absoluto da imagem */
             background-repeat: no-repeat; /* não repete a imagem do fundo quando ela "acaba" */
             background-size: cover; /* a imagem do fundo vai cobrir todo o fundo da tela e se ajustar conforme precisar mesmo que para isso precise "esconder" ou "cortar" partes da imagem na exibição */
+        }
+        
+        section#espaco { /*section usada pra configurar o alinhamento do astronauta sobre o fundo */
             position: relative; /* por padrão todo box/div/objeto é *relative* pois é a posição inicial em relação (relative) ao cato esquerdo superior "left/top" e não aceita personalização */
             height: 95vh; /* exibição em 95% da altura da viewport */
         }
-            
-        div#astronauta { /* configurações da exibição do astronauta */
+
+        article#astronauta { /* configurações da exibição do astronauta */
             background-image: url('imagens/astronauta.png');
             background-size: contain; /* redimensiona a imagem dentro da div/container sem destorcer, cortar ou esconder pedaços da imagem na visualização */
             background-repeat: no-repeat; /* não repete a imagem */
@@ -39,8 +42,10 @@
     </style>
 </head>
 <body>
-    <div id="astronauta">
+    <section id="espaco">
+        <article id="astronauta">
 
-    </div> 
+        </article>
+    </section> 
 </body>
 </html>
