@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do Astroauta</title>
+    <style>
+        * { /*configurações cglobais da página */
+            /* todas os elementos e conteúdos iniciam com margem 0 necessitando ajuste */
+            margin-top: 0px; 
+            margin-left: 0px;
+        }
+
+        body { /* configurações da imagem de fundo e exibição */
+            background-attachment: fixed; /* fiza o fundo, permitindo que somente o conteúdo que se mexa com o scroll */
+            background-color: darkblue;
+            background-image: url('imagens/espaco.jpg');
+            background-position: center center; /* exibe a imagem baseado pelo centro absoluto da imagem */
+            background-repeat: no-repeat; /* não repete a imagem do fundo quando ela "acaba" */
+            background-size: cover; /* a imagem do fundo vai cobrir todo o fundo da tela e se ajustar conforme precisar mesmo que para isso precise "esconder" ou "cortar" partes da imagem na exibição */
+        }
+        
+        section#espaco { /*section usada pra configurar o alinhamento do astronauta sobre o fundo */
+            position: relative; /* por padrão todo box/div/objeto é *relative* pois é a posição inicial em relação (relative) ao cato esquerdo superior "left/top" e não aceita personalização */
+            height: 95vh; /* exibição em 95% da altura da viewport */
+        }
+
+        article#astronauta { /* configurações da exibição do astronauta */
+            background-image: url('imagens/astronauta.png');
+            background-size: contain; /* redimensiona a imagem dentro da div/container sem destorcer, cortar ou esconder pedaços da imagem na visualização */
+            background-repeat: no-repeat; /* não repete a imagem */
+            background-position: center center; /* exibe a imagem baseado no alinhamento central da mesmoa */
+            position: absolute; /* define a posição baseada no canto absoluto superior esquerdo dependendo das funções left e top para alinhar na página */
+
+            left: 50%; /* posiciona o cando esquerdo superior do elemento absoluto em 50% após a margem esquerda */
+            top: 50%; /* posiciona o cando esquerdo superior do elemento absoluto em 50% após a margem superior */
+            transform: translate(-50%, -50%); /* retorna a configuração anterior em 50% do que foi definido */
+
+            height: 60vh; /* a altura da div/box/article contem 60% da altura da viewport */ 
+            width: 60vw; /* a largura da div/box/article contem 60% da largura da viewport */ 
+        }
+    </style>
+</head>
+<body>
+    <section id="espaco">
+        <article id="astronauta">
+
+        </article>
+    </section> 
+</body>
+</html>

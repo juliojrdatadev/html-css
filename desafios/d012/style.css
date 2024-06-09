@@ -86,7 +86,7 @@ section.imagem { /* configuração das sectios que vão receber o background fix
 section.imagem > p { /* configuração dos paragrafos que vão transpassar pela imagens fixa no backgound */
     display: inline-block;
     padding: 5px; /* espaço entre conteúdo e borda externa */
-    background-color: rgba(0, 0, 0, 0.514); /* fundo semi trasparente sobre a imagem do BG */
+    background-color: rgba(0, 0, 0, 0.14); /* fundo semi trasparente sobre a imagem do BG */
     text-shadow: 1px 1px 0px black; /* sombra no texto para dar profundidade em cima do fundo semi transparente */
 }
 
