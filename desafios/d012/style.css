@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+/* INICIO IMPORTAÇÃO DE FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+.passion-one-regular {
+    font-family: "Passion One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+.sriracha-regular {
+    font-family: "Sriracha", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+/* FINAL IMPORTAÇÃO DE FONTS */
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: "Passion One", sans-serif;
+    --fonte3: "Sriracha", cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+}
+
+body {
+    background-color: darkgray;
+    min-height: 100vh; /* 100% da altura da viewport */
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-family: var(--fonte2);
+    font-size: 10vw; /* 10% da largura da viewport */ 
+    font-variant: small-caps; /* torna as letras minusculas iguais as maiusculas porem na altura das minusculas */   
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+/* CONFIGURAÇÃO MAIN CONTEÚDO */
+
+section {
+    padding-top: 10vh; /* espaçamento interno de 10% da altura da viewport entre a borda superior e o conteúdo */
+    padding-bottom: 10vh; /* espaçamento interno de 10% da altura da viewport entre a borda inferior e o conteúdo */
+    line-height: 2em; /* altura da linha / distanciamento entre uma linha e outra */
+    padding-left: 30px; /* espaçamento de pixel entre a borda esquerda e o conteúdo da section */
+    font-family: var(--fonte3);
+    font-size: 3.5vw; /* tamanho da fonte de 3,5% em relação a largura da viewport */
+}
+
+section > p {
+    padding-bottom: 2em; /* espaçamnento de 2x o tamanho padrão da font entre os paragrafos da mesma section */
+}
+
+section.normal { /* configuração das sections que não vãop mostrar o background fixed */
+    background-color: white;
+    color: black;
+}
+
+section.imagem { /* configuração das sectios que vão receber o background fixed */
+    background-color: rgb(51, 51, 51); /*cinza escuro */
+    color: white;
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.473);
+    background-size: cover; /* imagem vai cobrir todo o fundo da div/section se ajustando o tamanho */
+    background-attachment: fixed; /* vai fixar o fundo não peritindo se mexer junto com scroll */
+}
+
+section.imagem > p { /* configuração dos paragrafos que vão transpassar pela imagens fixa no backgound */
+    display: inline-block;
+    padding: 5px; /* espaço entre conteúdo e borda externa */
+    background-color: rgba(0, 0, 0, 0.514); /* fundo semi trasparente sobre a imagem do BG */
+    text-shadow: 1px 1px 0px black; /* sombra no texto para dar profundidade em cima do fundo semi transparente */
+}
+
+section#img01 { /* configuração da imagem de fundo da seção img01 */
+    background-image: url('imagens/background001.jpg');
+    background-position: right center; /* disposição de mostragem da imagem da direita para o centro */
+}
+
+section#img02 { /* configuração da imagem de fundo da selço img02 */
+    background-image: url('imagens/background002.jpg');
+}
+
+/* CONFIGURAÇÃO RODAPÉ */
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+footer > p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* CONFIGURAÇÕES DE LINKS */ 
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
