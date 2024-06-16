@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+        }
+
+        iframe#tela {
+            width: 95vw;
+            height: 520px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma Escolha</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique unde aperiam ducimus totam, harum nostrum ipsam magni cum, cupiditate illum error suscipit itaque doloribus repellendus quasi consequatur ratione explicabo nisi.
+    </p>
+    <!-- o link que vai abrir no iframe deve ter um target apontando para p "name" do iframe -->
+    <ul>
+        <li><a href="paginas-extras/pag001.html" target="_tela">Primeira Página</a></li>
+        <li><a href="paginas-extras/pag002.html" target="_tela">Segunda Página</a></li>
+        <li><a href="paginas-extras/pag003.html" target="_tela">Terceira Página</a></li>
+    </ul>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem eaque praesentium porro repellendus est ipsam autem dicta deleniti amet. Fugiat officiis alias eveniet aspernatur vitae reprehenderit accusamus quia dicta nisi.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti assumenda aliquid eius dicta dolore quos debitis, voluptatum nesciunt illum omnis aspernatur repudiandae placeat possimus impedit id dolorum in est perferendis.
+    </p>
+
+    <!-- o iframe que vai abrir o link deve ter um "name" e o link um target com o "name" do iframe -->
+    <iframe srcdoc="<h1> Escolha uma das opções acima</h1><br><p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti assumenda aliquid eius dicta dolore quos debitis, voluptatum nesciunt illum omnis aspernatur repudiandae placeat possimus impedit id dolorum in est perferendis.</p> <img src='imagens/Ativo.png'>" id="tela" name="_tela">
+        <p>Infelizmente seu navegador não é compatível com isso.</p>
+    </iframe>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates eaque a modi ea! Officiis facere reprehenderit sequi consectetur id repudiandae, iste rem, aliquid modi, iusto itaque nemo odit quod dolores?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi aperiam minima dicta at, quae impedit rerum ullam nemo ratione ut perspiciatis, delectus tenetur. Perferendis numquam autem harum eos fuga enim.
+    </p>
+</body>
+</html>
