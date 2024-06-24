@@ -1,3 +1,10 @@
 @charset "UTF-8";
 
-/* Config. orientação de tela em "pé" (portrait) */
+/* Config. orientação de tela "deitada" (landscape) */
+
+body {
+    background-image: url(../imagens/cev-portrait.jpg);
+    margin-top: 0px;
+    margin-left: 0px;
+    background-position: center bottom;
+}
