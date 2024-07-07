@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+/* Typical Device Breakpoints
+_____________________________
+
+Telas Pequenas = até 600px
+Celulares = de 600px até 768px
+Tablets = de 768px até 992px
+Desktops = de 992px até 1200px
+Telas Grandes = acima de 1200px
+_______________________________ */
+
+@media screen and (min-width: 768px) and (max-width: 992px) 
+{ /* tablet */
+
+    section {
+        background-color: white;
+        width: 80vw;
+        height: 280px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    div#imagem {
+        background: #5E89C2 url('../imagens/mecanico2.jpg') no-repeat left / cover;
+        width: 40%;
+        height: 100%;
+    }
+
+    div#login > h1 {
+        padding-top: 0px;
+        margin-top: -3px;
+    }
+
+}
+    
+
+@media screen and (min-width: 992px) and (max-width: 1200px)
+{ /* desktop */
+
+    section {
+        background-color: white;
+        width: 80vw;
+        height: 280px;
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    
+    div#imagem {
+        background: #5E89C2 url('../imagens/mecanico-orcamento2.jpg') no-repeat right / cover;
+        width: 50%;
+        height: 100%;
+    }
+
+    div#login > h1 {
+        padding-top: 0px;
+        margin-top: -3px;
+    }
+
+}
+
+@media screen and (min-width: 1200px)
+{ /* desktop */
+
+    section {
+        background-color: white;
+        width: 960px;
+        height: 280px;
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    
+    div#imagem {
+        background: #5E89C2 url('../imagens/mecanico-orcamento2.jpg') no-repeat right / cover;
+        width: 50%;
+        height: 100%;
+    }
+
+    div#login > h1 {
+        padding-top: 0px;
+        margin-top: -3px;
+    }
+
+}
