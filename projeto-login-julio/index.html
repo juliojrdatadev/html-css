@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/style.css" media="all">
+    <link rel="stylesheet" href="estilos/media-query.css">
+    <title>Login</title>
+</head>
+<body>
+    <main>
+        <section id="telaLogin">
+
+            <div id="imagem">
+                <!-- contem iamgem na css -->
+            </div>
+
+
+            <div id="login"> 
+
+                <h1>Login</h1> 
+
+                <h4>Seja bem-vindo(a) novamente.</h4>
+                <p>Faça login para acessar sua conta e administrar seus orçamentos e ordens de serviços.</p>
+                
+                <form action="login.php" method="post">
+
+                                <div class="bgAzul">
+                                    <span class="material-icons">person</span>
+                                    <input class="campo" type="email" name="usuario" placeholder="mail@mail.com" required>
+                                </div>
+
+                                <div class="bgAzul">
+                                    <span class="material-icons">vpn_key</span>
+                                    <input class="campo" type="password" name="senha" minlength="8" placeholder="senha">
+                                </div>
+
+                                <input type="submit" value="Entrar" id="entrar"/>
+
+                                <a href="#" id="esqueci">Esqueci a Senha</a>
+                                 
+                </form>
+
+            </div>
+        </section>
+    </main>
+    </body>
+</html>
