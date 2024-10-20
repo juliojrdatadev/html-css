@@ -1,0 +1,80 @@
+QUAL O TAMANHO E FORMATO DO CONTEÚDO?
+
+Vai depender do formato e da VISUALIZAÇÃO do CONTAINER / BOX (CAIXA)
+
+
+
+NO CONTAINER DE FORA, COLOCAR DISPLAY: FLEX; A CAIXA DE "FORA" JÁ FICA FLEXIVEL AO TAMANHO DA VIEWPORT
+E NAS CAIXA DE DENTRO COLOCAR ELAS COMO FLEX: AUTO; TODO O CONTEÚDO CINTIDO NO CONTEINER SE FORNA "FLUIDO"
+
+o elemento "PAI" é o "CONTAINER" de fora, que vai levar as configurações de - DISPLAY: FLEX; -
+
+os ITENS, "filho" vão levar as configurações 
+
+
+---
+
+
+flex-direction:
+
+automaticamente sem não declarar a flex-direction: ela fica coimo "row" (linha) 
+ou seja na horizontal da esquerda para a direita --->>
+
+flex-direction: row; --->>>
+
+CASO utilize a declaração flex-direction: row-reverse;
+o sentido de adaptação da caixa pai/container 
+muda a sua "quebra" e exposição dos elementos filhos da direita para esquerda.
+<<<---
+
+
+----
+
+flex-direction: column; (coluna/vertical)
+o fluxo de exposição dos itens "filhos" fica de cima para baixo
+|
+|
+|
+V
+V
+
+
+flex-direction: column-reverse;
+o fluxo de exposiução dos itens "filhos" fica de baixo para cima
+/\
+/\
+/\
+
+---------
+
+EIXO PRINCIPAL ou EIXO HORIZONTAL:    ---->>>
+
+MAIN-AXIS
+main-start / main-end
+
+
+EIXO TRANSVERSAL ou EIXO VERTIVAL
+
+CROSS-AXIS
+cross-start / cross-end
+|
+|
+V
+V
+
+-----
+
+EMPACOTAMENTO
+
+flex-wrap: nowrap; = valor padrão, não altera a disposiçãO, NÃO "QUEBRA" a sequencia a qual foi ordenada
+
+
+SHORTHAND
+
+FLEX-FLOW: ROW WRAP
+
+FLEX-FLOW: ROW-REVERSE NOWRAP
+
+FLEX-FLOX: COLUMN WRAP-REVERSE
+
+ 

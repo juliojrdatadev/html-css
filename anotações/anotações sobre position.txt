@@ -1,0 +1,82 @@
+STATIC
+Posicionamento padrão do css
+Stacic significa que a ordem que as coisas aparecem no browser é a mesma que aparece o codigo.
+
+STATICO = ESTATICO, NÃO SE MOVE, NÃO SAI DO LUGAR, MESMO QUE COM INSTRUÇÕES.
+ 
+Exemplo:
+
+Se o elemento com position static estiver no conteúdo entre uma tag h1 e uma tag p, esse é o local onde ele vai ser exibido.
+Caso ele esteja no final da página ap´ps uma tag p, vai ser então o local onde ele vai ser exibido na página...
+E assim sussesivamente.
+
+
+_______
+
+
+RELATIVE
+
+Aparentemente o STATIC e o RELATIV vão ter o mesmo comportamento.
+Porém o RELATIVE aceita configurações de TOP, LEFT, RIGHT E BOTTOM com base na sua posição "original" dentro do conteúdo.
+
+Exemplo:
+ 
+Se ele for colocado após um elemento ou tag, sua configuração de TOP, LEFT, RIGHT ou BOTTOM, 
+vai ser em relação ao elemento anterior ao qual ele está posicionado dentro do conteúdo.
+Sendo assim, se colocarmos uma div#relative depois de uma tag <p> por exemplo, e na css configurarmos com top: 50px;
+ele vai se posicionar 50px a baixo da tag <p> que está anteriormente posicinada da div#relative e "invadir" 50px "sobre" da tag/elemento seguinte.
+
+E por mais que o div#relative "invada" e transpace "por cima" o espaço do elemento/tag seguinte, 
+o elemento/tag se mantem na posição original e até mesmo o espaço onde a div#relative estava originalmente,
+se mantem preservado, deslocando apenas o elemento "visualmente" mantendo o espaço em "branco".
+
+Ou seja, ele se movimenta relativo a ele mesmo.
+
+ABSOLUTE, RELATIVE, FIXED E STICKY são elementos considerados posicionados.
+Consegue-se movimentar ele na sobre "sobre" elementos que naõ estão selecionados
+
+
+OBS:
+
+RELATIVE PRESERVA SEU ESPAÇO NO "FLOW" DA PÁGIONA, NO MEIO DO CONTEÚDO, 
+PORÉM DESLOCA O ELEMENTO QUE CONTEM O POSITION: RELATIVE; POR CIMA DOS OUTROS CONTEÚDOS OU ELEMENTOS.
+COMO SE ELE MUDASSE DE "CAMADA"
+
+________
+
+ABSOSUTE
+
+Normalmente utilizado em conjunto, dentro, um outro elemento com position ABSOLUTE, RELATIVE, FIXED E STICKY
+Sendo assim ele se posiciona em relação ao seu elemento/div "pai";
+
+NÃO FUNCIONA COM STATIC
+
+_________
+
+FIXED
+
+Vai sempre se posicionar fixamente com relação a viewport.
+Utilizando configurações de top, left, right bottom
+
+NÃO ROLA JUNTO COM A TELA, FICA FIXO NA SUA POSIÇÃO ENQUANTO O CONTEÚDO SE MOVIMENTA.
+
+
+___________
+
+STICKY
+
+ELEMENTOS COM POSITION: STICKY, ficam "colados" fixos, 
+na posição "top, left, right ou bottom" até encontrar outro elemento na rolagem da pagina/viewport
+
+
+___________
+
+
+Z-INDEX
+
+CAMADA MAIS FUNDA = Z-INDEX: 0;
+
+CAMADA MAIS SUPERFICIAL = ZINDEX: 3; (por exemplo)
+
+Para posicionar um elemento "sobre" ou a frente de alguym otro elemento na viewpot,
+pode-se uzar Z-index, 0 é padrão, e quanto mairo, mais a frente ele fica.

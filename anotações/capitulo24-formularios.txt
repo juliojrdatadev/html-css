@@ -1,0 +1,211 @@
+CAPITULO 24 - FORMULÁRIOS EM HTML
+
+Todo formuláriuo deve estar dentro de uma tag <form></form>
+
+
+Para fazer a caixinha de preenchimento do fomrulári, utiliza-se a tag <input>
+
+No caso de texto a <input type="text"> - input:text
+
+Toda caixa input de texto deve ter nome e id
+
+<input type="text" name="nome" id="id">
+
+----
+
+BOTÃO DE ENVIAR
+
+input:submit
+
+Dentro de "value" colocar o nome do botão ou ação que ele vai fazer
+
+<input type="submit" value="ENVIAR">
+
+-----
+
+COMO "DESLIGAR" O PREENCHIMENTO DE TEXTO NO CAMPO DE FORMULÁRIO
+
+<form autocomplete="off">
+
+----
+
+PARA ENVIAR/SALVAR OS DADOS CADASTRADOS NO FORMULÁRIO
+deve-ve utilizar o atributo action="nomedoarquivo.linguagem" junto com a tag <form></form>
+
+<form action="cadastro.php"> </form>
+
+-----
+
+PARA IDENTIFICAR CADA CAMPO DE PREENCHIMENTO DO FORMULÁRIO UTILIZA-SE "LABELS"
+
+No caso para html e php, utiliza-se o atributo name="" junto com a tag <input>
+Já para javascript, utiliza-se o atributo id="" junto com a tag <input>
+
+<input type="text" name="nomeDoCampo" id="inomeDoCampo"> 
+** neste caso, utiliza-se "i" na frente do id para diferenciar o "id" do "name"
+
+EM PARALELO, UTILIZA-SE A TAG LABEL
+<label for="idDoCampo">Nome do campo:</label>
+
+EXEMPLO PARA O CASO:
+
+<form action="cadastro.php">
+   <p>
+      <label for="inomeDoCampo">Nome do Campo:</label>
+      <input type="text" name="nomeDoCampo" id="inomeDoCampo">
+   </p>
+</form>
+
+
+O LABEL CRIA UMA ÁREA MAIOR DE "SENSIBILIDADE" PARA A CAIXA DE TEXTO OU BOTÃO DE AÇÃO SOMADO AO NOME DO CAMPO OU BOTÃO
+
+-----
+
+MÉTODOS DE ENVIO/SALVAMENTO DE DADOS DE FORMULÁRIOS
+
+<form action="nomearquivo.linguagem" method="METODO">
+
+EXISTEM 2 TIPOS: get e post
+
+O método GET "mostra" os dados na atualização da url no navegador.
+Já o método POST "oculta" os dados na atualização da url no navegador, porém não "esconde" no código. 
+
+MÉTODO GET é utilizado quando os dados do formulário não são sensiveis e secretos, também quando se quer "agilidade e praticidade".
+No caso de formulários de pesquisas, gera o link na url "personalizado" facilitando compartilhar o link da pesquisa.
+NÃO ACEITA ENVIO DE DAOS QUE NÃO SEJA CARACTERES E LIMITA ESSE ENVIO EM 3.000 CARACTERES
+
+MÉTODO POST é utilizado quand se precisa de algum tipo de "sigilo ou segurança", 
+dados com mais de 3.000 caracteres (bites) e no caso de ENVIOS / UPLOADS DE ARQUIVOS.20:24 20/06/2024
+
+----
+
+FORMULÁRIO INPUT COM PARAMETRO "REQUIRED" SÓ ACEITA CLICAR EM ENVIAR SE OS CAMPOS ESTIVEREM PREENCHIDOS.
+
+----
+
+CAMPOS DE FORMULÁRIO QUE PRECISAM DE UMA QUANTIDADE MINIMA OU MÁXIMA DE CARACTERES
+
+minlength="5" maxlength="15"
+
+OU SEJA: minlength = quantidade mínima / maxlength = quantidade máxima
+
+<input type="text" name="usu" id="iusu" required minlength="5" maxlength="15">
+
+
+----
+
+
+LEGENDA DENTRO DO CAMPO DE TEXTO DO FORMULÁRIO:
+
+placeholder="TEXTO DE LEGENDA"
+
+<input type="password" name="abc" id="iabc" required minlength="5" maxlength="10" size="10" placeholder="TEXTO DE LEGENDA">
+
+
+-----
+
+REMOVER A OPÇÃO DE PREENCHIMENTO AUTOMÁTICO DOS CAMPOS D FORMULÁRIO
+<form action="cadastro.php" method="post" autocomplete="off">
+
+-----
+
+
+PARA CAMPÓS DE FORMULÁRIOS QUE SÓ DEVEM ACEITAR NUMEROS
+
+utilizar input type="number"
+
+
+---
+
+
+QUANDO PRECUSAR ou quiser aceitar NUMERO QUEBRADOS POR VIRGULA, utilizar o paramtro 
+
+step="0.1" ou 0.2 0.3 0.4 0.5 e assim por diante
+
+---
+
+PARA LIMITAR A QUANTIDADE DE NUMEROS POR CAMPO NUMERICO UTILIZAR:
+
+<imput type="text" name="" id="" min="quantidade minima de numero" max="quantidade maxima de numeros">
+
+----
+
+USAR PATTERN (REGEX)
+Quando quiser limitar um tipo/formato exato de dados coletados no formulário
+
+----
+
+FIELDSET (CONJUNTO/AGRUPAMENTO DE CAMPOS DE DADOS)
+<fieldset>
+<legend> Titulo do conjunto</legend>
+
+</fieldset>
+
+----
+
+TODO FORMULÁRIO COM input type="radio"
+nodos os "name" devem ter o mesmo nome, apenas mudar o ID
+
+
+---
+
+
+quando quiser "salvar" um valor de uma checkbox ou radio, usar o parametro value="valor a ser salvo"
+
+
+----
+
+
+QUANDO FOR USAR O INPUT TYPE="FILE" OU SIMILARES
+
+DESE-SE UTILIZAR SEMPRE FORM COM METHOD="POST"
+
+----
+
+FORMULÁRIOS COM LISTAS "DROP DOWN"
+
+<select name="nome" id="id">
+	<option value="RN">Rio grande do Norte</option>
+
+optgroup para agrupar opções com label=""
+
+optgroup label="nome do grupo de seleção"
+
+
+---
+
+FORMULÁRIOS COM LISTAS PRÉ PREENCHIDAS
+
+utiliza um label id=""
+utiliza um input name="" id="" list="nomedatalist"
+utiliza um datalist id="nomedatalist"
+seguido de options pré cadastradas sem value
+<option>Opção pré cadastrada</oton>
+
+
+----
+
+
+PARA FORMULARIOS COM CAMPOS DE MENSAGEM
+
+Utilizar label seguido de <textarea name="nome" id="id" cols="qtd colunas" rows="qtd linhas"
+
+UTILIZAR FORM com METHOD:POST para não estourar o limite de bits permitidos pelo method get
+
+
+----
+
+
+OUTPUT TEM QUE SER ACOMPANHADO DE ALGUM JAVASCRIPT PARA IMPRIMIR NA TELA
+
+O OUTPUT NÃO ENVIA NADA, APENAS IMPRIME NA TELA.
+
+
+--
+
+SCRIPT PARA OUTPUT COM JAVASCRIPT
+<input type="number" id="idInput" oninput="idOutput.innerHTML = TipodeDados(idInput.value)">
+            <output id="idOutput">Valor</output>
+
+
+OBS: O tipode dedasos podem ser Number, String, Boolean (true ou false), Null, Undefined, Biglnt ou Symbol

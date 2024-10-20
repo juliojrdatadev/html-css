@@ -1,0 +1,21 @@
+CAPITULO 25- MIDIAS QUIRIES
+
+Medias Queries são configurações css para cada tipo de tela ou impressão do conteúdo.
+
+---
+
+Media Type são os tipos de midia que existem.
+Media Screen (telas)
+Media Print (impressoras)
+
+---
+
+Media Features são caracteristicas diferentes para cada tipo de Media Type
+
+----
+
+Sempre que for criar novas css para as @medias
+conferir as atualizações de breakpoints dos dispositivos para quais vai ser criado
+
+
+
